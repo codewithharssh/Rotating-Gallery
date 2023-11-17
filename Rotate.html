@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+margin:0;  
+padding:0;
+box-sizing:border-box;
+}  
+
+body{
+display:flex;  
+justify-content:center;
+align-items:center;
+min-height:100vh;
+background:#000;
+font-family: 'poppins', sans-serif;;
+}
+
+.box{
+position:relative;   
+width:140px;
+height:160px;
+animation:animate 20s linear infinite;
+transform-style:preserve-3d;
+}
+
+.box span{
+position:absolute;  
+top:0;
+left:0;
+width:100%;
+height:100%;
+transform-origin:center;
+transform-style:preserve-3d;
+transform: rotateX(calc(var(--i) * 45deg)) translateZ(210px);
+}
+
+.box span img{
+position:absolute; 
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+@keyframes animate{
+0%{
+ transform:perspective(1000px) rotateX(0deg) rotateY(35deg);        
+}100%{
+ transform:perspective(1000px) rotateX(360deg) rotateY(35deg);        
+}       
+}
+
+
+.box p{
+position:absolute;
+top:50%;
+left:-20%;
+transform:translate(-50%,-50%);
+white-space:nowrap;
+color:white;
+animation:reverseRotate 20s linear infinite;
+/*color: #f5f5f5;
+text-shadow: 0px -2px 4px #fff, 0px -2px 10px #FF3, 0px -10px 20px         #F90, 0px -20px 40px #C33;
+font-weight:600;*/
+font-size:30px;
+}
+
+@keyframes reverseRotate{
+0%{
+ transform:rotateX(0deg) rotateY(0deg);        
+}100%{
+ transform:rotateX(-360deg) rotateY(-35deg);        
+}       
+}
+</style>        
+        <title></title>
+</head>
+
+<body>
+<div class="box">
+   <p class="font-effect-fire-animation">Prachi Bisht ❤</p>     
+   <span style="--i:1;"><img src="img1.jpg"></span>
+   <span style="--i:2;"><img src="img2.jpg"></span>    
+   <span style="--i:3;"><img src="img3.jpg"></span>    
+   <span style="--i:4;"><img src="img4.jpg"></span>    
+   <span style="--i:5;"><img src="img5.jpg"></span>    
+   <span style="--i:6;"><img src="img6.jpg"></span>  
+   <span style="--i:7;"><img src="img7.jpg"></span>    
+   <span style="--i:8;"><img src="img8.jpg"></span>    
+</div>
+</body>
+
+</html>
